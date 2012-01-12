@@ -1,0 +1,12 @@
+# -----------------------------------------------------------------------------
+# START REWRITE ENGINE
+# -----------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+	RewriteEngine On
+</IfModule>
+
+# Don't rewrite existing files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$0 [PT]
