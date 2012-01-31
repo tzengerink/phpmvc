@@ -150,8 +150,9 @@ class Auth {
 			return FALSE;
 		}
 
-		// Explode cookie value into username and password
-		list($username, $password) = explode(Config::load('core')->get('secure_key'), $variable);
+		// Explode cookie value into username and password (if possible)
+		$explode = explode(Config::load('core')->get('secure_key'), $variable);
+		list($username, $password) = (count($explode) == 2) ? $explode : array('', '');
 
 		// Return user info or FALSE if not logged in
 		return $this->_check($username, $password);
