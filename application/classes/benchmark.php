@@ -93,6 +93,21 @@ class Benchmark {
 	}
 
 	/**
+	 * Results of all the functions in the requested class.
+	 *
+	 * @return  array  results
+	 */
+	public function results()
+	{
+		$results = array();
+		foreach ($this->_methods as $method)
+		{
+			$results[$method->name] = $this->_instance->{$method->name}();
+		}
+		return $results;
+	}
+
+	/**
 	 * Run the benchmark test on the requested class.
 	 *
 	 * @param   integer   step size
