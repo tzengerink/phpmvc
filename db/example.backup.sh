@@ -16,4 +16,4 @@ DBASE="[database_name]"
 mysqldump -u$USER -p$PASS $DBASE --single-transaction > "$DIR/backups/$DBASE-$(date +%Y%m%d-%H%M%S).sql"
 
 # Delete backups of +5 days old
-find "$DIR/backups" -type f -name "$DBASE-*.sql" -mmin +5 -delete
+find "$DIR/backups" -type f -name "$DBASE-*.sql" -mtime +5 -delete
