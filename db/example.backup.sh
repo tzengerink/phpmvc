@@ -8,18 +8,12 @@ USER="[username]"
 PASS="[password]"
 DBASE="[database_name]"
 
-# Set variables
-YEAR=`date +%Y`
-MONTH=`date +%m`
-DAY=`date +%d`
-TIME=`date +%H%M`
-
-# Create backup directory for today
-mkdir -p "$DIR/backups/$YEAR/$MONTH/$DAY"
-
 ##
 # Dump database using --single-transaction
 #
 # [!!] This only works with InnoDB, all other formats will be ignored
 #
-mysqldump -u $USER -p$PASS $DBASE --single-transaction > "$DIR/backups/$YEAR/$MONTH/$DAY/$TIME.sql"
+mysqldump -u$USER -p$PASS $DBASE --single-transaction > "$DIR/backups/$DBASE-$(date +%Y%m%d-%H%M%S).sql"
+
+# Delete backups of +5 days old
+find "$DIR/backups" -type f -name "$DBASE-*.sql" -mmin +5 -delete
