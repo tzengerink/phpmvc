@@ -27,4 +27,4 @@ class Benchmark_Uristring {
 		return $explode[1];
 	}
 
-} // End Benchmark Uristring
+}
