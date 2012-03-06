@@ -4,33 +4,28 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-		<title>Page Not Found</title>
+		<title>Exception - <?php echo $message; ?></title>
 		<style type="text/css">
-			body { color:#333; font-family:"Lucida Sans Unicode","Lucida Grande","Lucida Sans",Lucida,sans-serif; }
-			#page { 
-				background-color:      #eee;
-				-webkit-border-radius: 8px; 
-				-moz-border-radius:    8px; 
-				border-radius:         8px;
-				-webkit-box-shadow:    0px 0px 3px 3px #ddd;
-				-moz-box-shadow:       0px 0px 3px 3px #ddd;
-				box-shadow:            0px 0px 3px 3px #ddd;
-				margin:                35px auto;
-				padding:               10px;
-				width:                 80%;
-			}
-			#page h1 { font-size:26px; text-shadow:0px 1px 1px #fff; filter:dropshadow(color=#fff,offx=0,offy=1); margin-left:20px; }
-			#page ul li,
-			#page a,
-			#page p { font-size:14px; }
-			#page p { padding:0 20px; }
-			#page a { color:#48b; }
+			body { color:#333; font-family:"Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Lucida, sans-serif; }
+			#header { 
+				background-color:               #dd4b39;
+				-moz-border-radius-topleft:     4px;
+				-moz-border-radius-topright:    4px;
+				-moz-border-radius-bottomright: 0px;
+				-moz-border-radius-bottomleft:  0px;
+				-webkit-border-radius:          4px 4px 0px 0px;
+				border-radius:                  4px 4px 0px 0px;
+				color:                          #fff;
+				font-size:                      18px;
+				padding:                        8px;
+			}	
+			p, li { font-size:14px; padding:5px; }
 		</style>
 	</head>
 	<body>
 		<div id="page">
-			<h1>Page not found</h1>
-			<div>
+			<div id="header">Page not found</div>
+			<div id="body">
 				<p>Sorry, but the page you were trying to view does not exist.</p>
 				<p>It looks like this was the result of either:</p>
 				<ul>
