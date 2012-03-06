@@ -43,13 +43,22 @@ class Core {
 			$str = ''; 
 			foreach ($args as $arg)
 			{
-				if (is_bool($arg))
+				switch ($arg)
 				{
-					$str .= ($arg ? '(bool) TRUE' : '(bool) FALSE').'<br /><br />';
-				}
-				else
-				{
-					$str .= '<pre>'.print_r($arg, TRUE).'</pre>';
+					case is_bool($arg):
+						$str .= ($arg ? '<pre>(bool) TRUE' : '(bool) FALSE').'</pre>';
+						break;
+					case is_int($arg):
+						$str .= '<pre>(int) '.$arg.'</pre>';
+						break;
+					case is_float($arg):
+						$str .= '<pre>(float) '.$arg.'</pre>';
+						break;
+					case is_string($arg):
+						$str .= '<pre>(string) '.$arg.'</pre>';
+						break;
+					default:
+						$str .= '<pre>'.print_r($arg, TRUE).'</pre>';
 				}
 			}
 			return $str;
