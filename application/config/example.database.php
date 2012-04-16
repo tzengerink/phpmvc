@@ -1,8 +1,8 @@
 <?php defined('DOCROOT') or die('No direct access allowed.');
 
 return array(
-	'hostname' => 'webdev.local:3306',
+	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => 'root',
-	'database' => 'testdb',
+	'password' => 'pass',
+	'database' => 'test',
 );
