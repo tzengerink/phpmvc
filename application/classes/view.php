@@ -3,12 +3,10 @@
  * View loads a view file and returns renders the variable with the given data and returns
  * it as a string.
  *
- * Example usage:
- * <code>
+ * Example:
  * View::factory('view/file', array('variable' => 'value'))
  *   ->set('variable', 'value')
  *   ->render();
- * </code>
  *
  * @package   PHPMVC
  * @category  Core

@@ -3,14 +3,12 @@
  * Response creates the response with a valid HTTP header, status codes, status message
  * any other header and the body.
  *
- *	Example usage:
- * <code>
+ * Example:
  * Response::instance()
  *   ->status(200)
  *   ->header('Content-Type', 'text/html')
  *   ->body('<h1>Hello, World!</h1>')
  *   ->render();
- * </code>
  *
  * @package   PHPMVC
  * @category  Core

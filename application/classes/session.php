@@ -2,15 +2,10 @@
 /**
  * Handles all session variables for you.
  *
- * Example:
- * <code>
- * Session::instance('session_name')
- *   ->set('var_name', 'var_value');
- * Session::instance('session_name')
- *   ->get('var_name');
- * Session::instance('session_name')
- *   ->delete('var_name');
- * </code>
+ * Examples:
+ * Session::instance('session_name')->set('var_name', 'var_value');
+ * Session::instance('session_name')->get('var_name');
+ * Session::instance('session_name')->delete('var_name');
  *
  * @package   PHPMVC
  * @category  Core

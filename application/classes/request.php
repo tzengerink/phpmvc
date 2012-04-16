@@ -2,10 +2,8 @@
 /**
  * Request checks the requested uri and executes the correct controller and action.
  *
- * Example usage:
- * <code>
+ * Example:
  * Request::instance()->execute();
- * </code>
  *
  * @package   PHPMVC
  * @category  Core

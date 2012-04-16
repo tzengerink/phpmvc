@@ -2,10 +2,8 @@
 /**
  * Model returns an instance of the requested model name.
  *
- * Example usage:
- * <code>
+ * Example:
  * Model::factory('model_name');
- * </code>
  *
  * @package   PHPMVC
  * @category  Model

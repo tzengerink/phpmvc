@@ -1,7 +1,6 @@
 <?php defined('DOCROOT') or die('No direct access allowed.');
 /**
- * SQL:
- * <code>
+ * Example SQL:
  * CREATE TABLE IF NOT EXISTS `users` (
  *   `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
  *   `username` VARCHAR(255) NOT NULL,
@@ -16,7 +15,6 @@
  *   `updated` INT(10) DEFAULT NULL,
  *   PRIMARY KEY (`id`)   
  * ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
- * </code>
  *
  * @package   PHPMVC
  * @category  Model

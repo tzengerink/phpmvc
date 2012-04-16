@@ -2,13 +2,9 @@
 /**
  * Encrypt support the encryption and decryption of strings.
  *
- * Example:
- * <code>
- * $encrypted = Encrypt::instance('key')
- *   ->encrypt('string');
- * $decrypted = Encrypt::instance('key')
- *   ->decrypt('string');
- * </code>
+ * Examples:
+ * $encrypted = Encrypt::instance('key')->encrypt('string');
+ * $decrypted = Encrypt::instance('key')->decrypt('string');
  *
  * @package   PHPMVC
  * @category  Core

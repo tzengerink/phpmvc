@@ -3,11 +3,9 @@
  * Handles all cookie variables for you.
  *
  * Example:
- * <code>
  * Cookie::set('name', 'value');
  * Cookie::get('name');
  * Cookie::delete('name');
- * </code>
  *
  * @package   PHPMVC
  * @category  Core
