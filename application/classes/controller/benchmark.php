@@ -27,7 +27,7 @@ class Controller_Benchmark extends Controller {
 		// Redirect if in production, no benchmark name given or when benchmark does not exist
 		$production  = Config::load('core')->get('is_production'); 
 		$name        = Request::instance()->param('name');
-		$file_exists = file_exists(APPROOT.'benchmark/'.$name.'.php');
+		$file_exists = file_exists(APPROOT.'benchmark/'.$name.EXT);
 
 		if ($production OR ! $name OR ! $file_exists)
 		{

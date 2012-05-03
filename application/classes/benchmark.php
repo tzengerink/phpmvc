@@ -83,7 +83,7 @@ class Benchmark {
 	public function __construct($name)
 	{
 		// Require requested benchmark class
-		require_once(APPROOT.'benchmark/'.strtolower($name).'.php');
+		require_once(APPROOT.'benchmark/'.strtolower($name).EXT);
 
 		// Set instances, reflection and methods
 		$class             = 'Benchmark_'.ucwords($name);

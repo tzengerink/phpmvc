@@ -53,12 +53,12 @@ class I18n {
 		// Set cache if it is not set already
 		if ( ! array_key_exists($lang, self::$cache))
 		{
-			if ( ! file_exists(APPROOT.'i18n/'.$lang.'.php'))
+			if ( ! file_exists(APPROOT.'i18n/'.$lang.EXT))
 			{
 				throw new Exception('Unable to load language file ('.$lang.')');
 			}
 
-			self::$cache[$lang] = require_once(APPROOT.'i18n/'.$lang.'.php');
+			self::$cache[$lang] = require_once(APPROOT.'i18n/'.$lang.EXT);
 		}
 
 		// Return the translations array

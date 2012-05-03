@@ -23,7 +23,7 @@ class Router {
 	{
 		if (empty(self::$routes))
 		{
-			self::$routes = require_once(DOCROOT.'routes.php');
+			self::$routes = require_once(DOCROOT.'routes'.EXT);
 		}
 
 		return new Router($uri);

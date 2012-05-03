@@ -17,7 +17,7 @@ class Core {
 	public static function auto_load($class)
 	{
 		// Get file path based on class name
-		$file = APPROOT.'classes/'.str_replace('_', '/', strtolower($class)).'.php';
+		$file = APPROOT.'classes/'.str_replace('_', '/', strtolower($class)).EXT;
 
 		// Require the file or die
 		if (file_exists($file))

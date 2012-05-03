@@ -7,12 +7,13 @@ define('START_MEMORY', memory_get_usage());
 
 /* -- ENVIRONMENT SETUP & SYSTEM CONFIGURATION ----------------------------- */
 
-// Set DOCROOT & APPROOT
+// Set CONSTANTS
+define('EXT',     '.php');
 define('DOCROOT', realpath(dirname(__FILE__)).'/');
 define('APPROOT', DOCROOT.'application/');
 
 // Require Core class
-require_once(APPROOT.'classes/core.php');
+require_once(APPROOT.'classes/core'.EXT);
 
 // Register Core auto loader
 spl_autoload_register(array('Core', 'auto_load'));

@@ -2,7 +2,7 @@
 if ( ! defined('DOCROOT')) define('DOCROOT', dirname(__FILE__).'/../../../');
 if ( ! defined('APPROOT')) define('APPROOT', dirname(__FILE__).'/../../../application/');
 
-require_once(APPROOT.'classes/router.php');
+require_once(APPROOT.'classes/router'.EXT);
 
 class RouterTest extends PHPUnit_Framework_TestCase {
 

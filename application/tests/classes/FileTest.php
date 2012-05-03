@@ -2,7 +2,7 @@
 if ( ! defined('DOCROOT')) define('DOCROOT', dirname(__FILE__).'/../../../');
 if ( ! defined('APPROOT')) define('APPROOT', dirname(__FILE__).'/../../../application/');
 
-require_once(APPROOT.'classes/file.php');
+require_once(APPROOT.'classes/file'.EXT);
 
 class FileTest extends PHPUnit_Framework_TestCase {
 

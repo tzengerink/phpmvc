@@ -2,8 +2,8 @@
 if ( ! defined('DOCROOT')) define('DOCROOT', dirname(__FILE__).'/../../../');
 if ( ! defined('APPROOT')) define('APPROOT', dirname(__FILE__).'/../../../application/');
 
-require_once(APPROOT.'classes/file.php');
-require_once(APPROOT.'classes/cache.php');
+require_once(APPROOT.'classes/file'.EXT);
+require_once(APPROOT.'classes/cache'.EXT);
 
 class CacheTest extends PHPUnit_Framework_TestCase {
 

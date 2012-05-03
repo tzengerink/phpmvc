@@ -51,7 +51,7 @@ class Config {
 	public function __construct($name)
 	{
 		// Set file
-		$this->file = APPROOT.'config/'.$name.'.php';
+		$this->file = APPROOT.'config/'.$name.EXT;
 
 		// Check if file exists
 		if ( ! file_exists($this->file))

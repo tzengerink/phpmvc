@@ -127,10 +127,10 @@ class Date {
 	protected static function _array($first = 0, $last = 10, $step = 1, $min = 2)
 	{
 		// Set variables
-		$first = $first < $last ? $first : $last;
-		$last  = $last > $first ? $last : $first;
-		$min   = $min > 1 ? $min : 1;
-		$step  = $step > 1 ? $step : 1;
+		$first = $first < $last  ? $first : $last;
+		$last  = $last  > $first ? $last  : $first;
+		$min   = $min   > 1      ? $min   : 1;
+		$step  = $step  > 1      ? $step  : 1;
 
 		// Create the list
 		$list = array();
@@ -206,11 +206,11 @@ class Date {
 		$diff      = $timestamp < $this->timestamp ? $this->timestamp - $timestamp : $timestamp - $this->timestamp;
 
 		// Calculate..
-		$diff -= Date::$year * ($span['years'] = (int) floor($diff / Date::$year));
-		$diff -= Date::$month * ($span['months'] = (int) floor($diff / Date::$month));
-		$diff -= Date::$week * ($span['weeks'] = (int) floor($diff / Date::$week));
-		$diff -= Date::$day * ($span['days'] = (int) floor($diff / Date::$day));
-		$diff -= Date::$hour * ($span['hours'] = (int) floor($diff / Date::$hour));
+		$diff -= Date::$year   * ($span['years']   = (int) floor($diff / Date::$year));
+		$diff -= Date::$month  * ($span['months']  = (int) floor($diff / Date::$month));
+		$diff -= Date::$week   * ($span['weeks']   = (int) floor($diff / Date::$week));
+		$diff -= Date::$day    * ($span['days']    = (int) floor($diff / Date::$day));
+		$diff -= Date::$hour   * ($span['hours']   = (int) floor($diff / Date::$hour));
 		$diff -= Date::$minute * ($span['minutes'] = (int) floor($diff / Date::$minute));
 		$span['seconds'] = $diff;
 
@@ -230,22 +230,22 @@ class Date {
 		$in_past   = $timestamp < $this->timestamp;
 		$diff      = $in_past ? $this->timestamp - $timestamp : $timestamp - $this->timestamp;
 
-		if ($diff < 10 AND $in_past)              return __('-seconds');
-		if ($diff < 10 AND ! $in_past)            return __('+seconds');
+		if ($diff < 10            AND $in_past)   return __('-seconds');
+		if ($diff < 10            AND ! $in_past) return __('+seconds');
 		if ($diff < Date::$minute AND $in_past)   return __('-minute');
 		if ($diff < Date::$minute AND ! $in_past) return __('+minute');
-		if ($diff < Date::$hour AND $in_past)     return __('-hour');
-		if ($diff < Date::$hour AND ! $in_past)   return __('+hour');
-		if ($diff < Date::$day AND $in_past)      return __('-day');
-		if ($diff < Date::$day AND ! $in_past)    return __('+day');
-		if ($diff < Date::$week AND $in_past)     return __('-week');
-		if ($diff < Date::$week AND ! $in_past)   return __('+week');
-		if ($diff < Date::$month AND $in_past)    return __('-month');
-		if ($diff < Date::$month AND ! $in_past)  return __('+month');
-		if ($diff < Date::$year AND $in_past)     return __('-year');
-		if ($diff < Date::$year AND ! $in_past)   return __('+year');
-		if ($diff > Date::$year AND $in_past)     return __('-+year');
-		if ($diff > Date::$year AND ! $in_past)   return __('++year');
+		if ($diff < Date::$hour   AND $in_past)   return __('-hour');
+		if ($diff < Date::$hour   AND ! $in_past) return __('+hour');
+		if ($diff < Date::$day    AND $in_past)   return __('-day');
+		if ($diff < Date::$day    AND ! $in_past) return __('+day');
+		if ($diff < Date::$week   AND $in_past)   return __('-week');
+		if ($diff < Date::$week   AND ! $in_past) return __('+week');
+		if ($diff < Date::$month  AND $in_past)   return __('-month');
+		if ($diff < Date::$month  AND ! $in_past) return __('+month');
+		if ($diff < Date::$year   AND $in_past)   return __('-year');
+		if ($diff < Date::$year   AND ! $in_past) return __('+year');
+		if ($diff > Date::$year   AND $in_past)   return __('-+year');
+		if ($diff > Date::$year   AND ! $in_past) return __('++year');
 	}
 		
 } // End Date
